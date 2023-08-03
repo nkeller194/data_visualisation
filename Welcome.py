@@ -18,20 +18,20 @@ st.dataframe(df)
 
 
 el_list = df.columns.tolist()[27:80]
-x_axis = st.selectbox('select element x_axis', el_list)
+x_axis = st.selectbox('select element', el_list)
 
 st.multiselect('select location', file_name_list, file_name_list[0])
 
 from bokeh.plotting import figure
 
-x = st.selectbox('select element', el_list)
-y = df['Si']
+x = st.selectbox('select element x_axis', el_list)
+y = st.selectbox('select element y_axis', el_list)
 
 p = figure(
     title='Element Scatter Plot',
     x_axis_label='Mg',
     y_axis_label='Si')
 
-p.circle(df[x], y, legend_label='Trend', line_width=2)
+p.circle(df[x], df[y], legend_label='Trend', line_width=2)
 
 st.bokeh_chart(p, use_container_width=True)
