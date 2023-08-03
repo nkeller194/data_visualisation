@@ -23,5 +23,5 @@ st.multiselect('select location', file_name_list, file_name_list[0])
 
 el_x = 'Mg'
 el_y = 'Si'
-plt.scatter(df[el_x], df[el_y]
+plt.scatter(df[el_x], df[el_y])
 plt.show()
