@@ -33,6 +33,6 @@ p = figure(
     y_axis_label = y + ' WT(%)')
 
 p.circle(df[x]/10000, df[y]/10000, legend_label='', line_width=2)
-p.line([min(x), max(x)], [mean(x)])
+p.line([min(x), max(x)], [mean(y), mean(y)])
 
 st.bokeh_chart(p, use_container_width=True)
