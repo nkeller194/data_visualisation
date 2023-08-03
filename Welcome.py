@@ -32,6 +32,6 @@ p = figure(
     x_axis_label='Mg',
     y_axis_label='Si')
 
-p.circle(x, y, legend_label='Trend', line_width=2)
+p.circle(df[x], y, legend_label='Trend', line_width=2)
 
 st.bokeh_chart(p, use_container_width=True)
