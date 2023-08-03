@@ -13,7 +13,7 @@ for i in os.listdir():
 
 st.write('Hello World')
 
-df = pd.read_csv('Bastar Craton.csv')
+df = pd.read_csv(str(file_name_list))
 st.dataframe(df)
 
 
@@ -28,7 +28,6 @@ x = st.selectbox('select element x_axis', el_list)
 y = st.selectbox('select element y_axis', el_list)
 
 p = figure(
-    st.multiselect('select location_plot', file_name_list, file_name_list[0]),
     title='Element Scatter Plot',
     x_axis_label = x + ' WT(%)',
     y_axis_label = y + ' WT(%)')
