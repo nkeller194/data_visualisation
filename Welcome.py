@@ -13,11 +13,11 @@ for i in os.listdir():
 
 st.write('Hello World')
 
-for i in df:
+for i in file_name_list:
   df = pd.read_csv(str(i))
-  df_multi = st.dataframe(i)
+  st.dataframe(i)
 
-el_list = df_multi.columns.tolist()[27:80]
+el_list = df.columns.tolist()[27:80]
 x_axis = st.selectbox('select element', el_list)
 
 st.multiselect('select location', file_name_list, file_name_list[0])
