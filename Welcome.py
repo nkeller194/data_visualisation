@@ -29,8 +29,8 @@ y = st.selectbox('select element y_axis', el_list)
 
 p = figure(
     title='Element Scatter Plot',
-    x_axis_label = x + 'wt(%)',
-    y_axis_label = y + 'wt(%)')
+    x_axis_label = x + ' WT(%)',
+    y_axis_label = y + ' WT(%)')
 
 p.circle(df[x]/10000, df[y]/10000, legend_label='Trend', line_width=2)
 
