@@ -28,8 +28,8 @@ y = df['Si']
 
 p = figure(
     title='Element Scatter Plot',
-    x_axis_label='x',
-    y_axis_label='y')
+    x_axis_label='Mg',
+    y_axis_label='Si')
 
 p.circle(x, y, legend_label='Trend', line_width=2)
 
