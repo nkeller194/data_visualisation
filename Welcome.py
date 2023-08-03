@@ -29,8 +29,8 @@ y = st.selectbox('select element y_axis', el_list)
 
 p = figure(
     title='Element Scatter Plot',
-    x_axis_label='Mg',
-    y_axis_label='Si')
+    x_axis_label = x,
+    y_axis_label = y)
 
 p.circle(df[x]/10000, df[y]/10000, legend_label='Trend', line_width=2)
 
