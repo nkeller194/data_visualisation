@@ -13,7 +13,7 @@ for i in os.listdir():
 
 st.write('Hello World')
 
-df = pd.read_csv(str(file_name_list))
+df = pd.read_csv(file_name_list)
 st.dataframe(df)
 
 
