@@ -21,8 +21,8 @@ st.multiselect('select location', file_name_list, file_name_list[0])
 
 from bokeh.plotting import figure
 
-x = df['Mg']/10000
-y = df['Si']/10000
+x = df[el_list/10000]
+y = df[el_list/10000]
 
 p = figure(
     title='Element Scatter Plot',
