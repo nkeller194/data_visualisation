@@ -28,10 +28,11 @@ x = st.selectbox('select element x_axis', el_list)
 y = st.selectbox('select element y_axis', el_list)
 
 p = figure(
+    st.multiselect('select location', file_name_list, file_name_list[0])
     title='Element Scatter Plot',
     x_axis_label = x + ' WT(%)',
     y_axis_label = y + ' WT(%)')
 
-p.circle(df[x]/10000, df[y]/10000, legend_label='Trend', line_width=2)
+p.circle(df[x]/10000, df[y]/10000, legend_label='', line_width=2)
 
 st.bokeh_chart(p, use_container_width=True)
