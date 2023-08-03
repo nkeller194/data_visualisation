@@ -34,6 +34,6 @@ p = figure(
 
 p.circle(df[x]/10000, df[y]/10000, legend_label='', line_width=2)
 p.line([np.min(df[x]/10000), np.max(df[x]/10000)], [np.mean(df[y]/10000), np.mean(df[y]/10000)], legend_label = 'mean')
-p.line(([np.min(df[x]/10000), np.max(df[x]/10000)], [np.mean(df[y]/10000) + np.std(df[y]/10000), np.mean(df[y]/10000) - np.std(df[y]/10000)])
+p.line([np.min(df[x]/10000), np.max(df[x]/10000)], [np.std(df[y]/10000), np.std(df[y]/10000)], legend_label = 'Std')
 
 st.bokeh_chart(p, use_container_width=True)
