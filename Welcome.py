@@ -15,7 +15,7 @@ st.write('Hello World')
 
 for i in file_name_list:
   df = pd.read_csv(str(i))
-  st.dataframe(i)
+  st.dataframe(df)
 
 el_list = df.columns.tolist()[27:80]
 x_axis = st.selectbox('select element', el_list)
